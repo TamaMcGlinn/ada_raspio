@@ -1,2 +1,5 @@
 all:
-	gcc -c *.ads
+	gcc -c src/*.ads
+
+clean:
+	rm *.ali *.o
