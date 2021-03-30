@@ -1,0 +1,7 @@
+name = "ada_raspio"
+description = "Shiny new project"
+version = "0.0.0"
+
+authors = ["Tama McGlinn"]
+maintainers = ["Tama McGlinn <t.mcglinn@gmail.com>"]
+maintainers-logins = ["TamaMcGlinn"]

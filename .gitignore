@@ -1,2 +1,4 @@
-/*.ali
-/*.o
+/obj/
+/lib/
+/alire/
+/alire.lock
