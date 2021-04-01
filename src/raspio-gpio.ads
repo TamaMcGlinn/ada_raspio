@@ -33,7 +33,7 @@ package Raspio.GPIO is
       BPLUS_GPIO_J8_31, BPLUS_GPIO_J8_32, BPLUS_GPIO_J8_33, BPLUS_GPIO_J8_35,
       BPLUS_GPIO_J8_36, BPLUS_GPIO_J8_37, BPLUS_GPIO_J8_38, BPLUS_GPIO_J8_40);
 
-   type Internal_Resistor_Type is (PUD_off, PUD_down, PUD_up);
+   type Internal_Resistor_Type is (Off, Pull_Down, Pull_Up);
    for Internal_Resistor_Type use (0, 1, 2);
    for Internal_Resistor_Type'Size use 8;
 
