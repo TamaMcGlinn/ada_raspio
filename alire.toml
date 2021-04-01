@@ -1,6 +1,6 @@
-name = "ada_raspio"
-description = "Shiny new project"
-version = "0.0.0"
+name = "raspberry_bsp"
+description = "Board Support package for Raspberry PI v1, v2 and B+"
+version = "1.0.0"
 
 authors = ["Tama McGlinn"]
 maintainers = ["Tama McGlinn <t.mcglinn@gmail.com>"]
