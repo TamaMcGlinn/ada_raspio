@@ -30,10 +30,29 @@ cd raspberry_example
 alr with raspberry_bsp
 ```
 
-Include raspberry_bsp.gpr in your own gpr file:
+Modify src/raspberry_example.adb, for example:
 
 ```
-with raspberry_bsp.gpr;
+with Ada.Text_IO;
+with Raspio.GPIO;
+
+procedure Raspberry_Example is
+   use Raspio.GPIO;
+begin
+   Raspio.Initialize;
+   declare
+      Button : constant Raspio.GPIO.Pin_Type :=
+        Raspio.GPIO.Create
+          (Pin_ID            => GPIO_P1_07, Mode => Input,
+           Internal_Resistor => Pull_Down);
+   begin
+      loop
+         if Raspio.GPIO.Read (Button) = On then
+            Ada.Text_IO.Put_Line ("Ow!");
+         end if;
+      end loop;
+   end;
+end Raspberry_Example;
 ```
 
 ## Autogenerate C bindings
