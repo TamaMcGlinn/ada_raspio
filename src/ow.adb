@@ -15,8 +15,8 @@ begin
   declare
     Button : constant Raspio.GPIO.Pin_Type :=
       Raspio.GPIO.Create
-        (Pin_ID            => V2_GPIO_P1_21, Mode => Input,
-        Internal_Resistor => Pull_Down);
+        (Pin_ID           => RPI_GPIO_P1_12, Mode => Input,
+        Internal_Resistor => Pull_Up);
   begin
     loop
       if Raspio.GPIO.Read (Button) = On then
