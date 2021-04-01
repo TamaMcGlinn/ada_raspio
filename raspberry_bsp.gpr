@@ -1,4 +1,4 @@
-project Ada_Raspio is
+project Raspberry_BSP is
 
    for Library_Name use "Ada_Raspio";
    for Library_Version use "0.0.0";
@@ -84,4 +84,4 @@ project Ada_Raspio is
       for Switches ("Ada") use ("-Es"); --  Symbolic traceback
    end Binder;
 
-end Ada_Raspio;
+end Raspberry_BSP;
