@@ -5,3 +5,7 @@ version = "1.0.0"
 authors = ["Tama McGlinn"]
 maintainers = ["Tama McGlinn <t.mcglinn@gmail.com>"]
 maintainers-logins = ["TamaMcGlinn"]
+
+licenses = "MIT"
+tags = ["raspberry", "pi"]
+website = "https://github.com/TamaMcGlinn/ada_raspio"
