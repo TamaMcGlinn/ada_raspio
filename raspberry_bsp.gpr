@@ -1,3 +1,5 @@
+with "bcm2835_library";
+
 project Raspberry_BSP is
 
    for Library_Name use "Ada_Raspio";

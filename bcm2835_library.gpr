@@ -1,0 +1,9 @@
+library project bcm2835_library is
+
+  for Externally_Built use "true";
+  for Library_Dir use "/usr/local/lib";
+  for Library_Name use "bcm2835";
+  for Source_Dirs use (); -- no sources.
+  for Library_Kind use "static";
+
+end bcm2835_library;
