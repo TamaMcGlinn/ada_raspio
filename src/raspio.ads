@@ -1,7 +1,7 @@
-package Ada_Raspio is
+package Raspio is
 
    Initialization_Error : exception;
 
    procedure Initialize;
 
-end Ada_Raspio;
+end Raspio;

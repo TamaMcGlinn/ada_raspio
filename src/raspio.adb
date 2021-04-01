@@ -1,7 +1,7 @@
 with bcm2835_h;
 with Interfaces.C; use Interfaces.C;
 
-package body Ada_Raspio is
+package body Raspio is
 
    procedure Initialize is
       Error_Code : constant Interfaces.C.int := bcm2835_h.bcm2835_init;
@@ -11,4 +11,4 @@ package body Ada_Raspio is
       end if;
    end Initialize;
 
-end Ada_Raspio;
+end Raspio;
