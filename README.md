@@ -55,6 +55,19 @@ begin
 end Raspberry_Example;
 ```
 
+## Using gnatmake
+
+If like me, you have trouble getting gprbuild and alire working on the raspberry pi,
+you can also just use gnatmake directly. The example program above is also included,
+as src/ow.adb. So if you have gnat installed (`sudo apt install gnat`) then you can just:
+
+```
+make
+./ow
+```
+
+And connect a button to GPIO pin 7.
+
 ## Autogenerate C bindings
 
 To autogenerate C bindings in the same way as this library, you can
