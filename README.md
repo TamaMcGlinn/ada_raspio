@@ -19,6 +19,23 @@ sudo make check
 sudo make install
 ```
 
+## Usage
+
+You could import the code using traditional methods, such as by git submodule,
+but alire is better:
+
+```
+alr init raspberry_example --bin
+cd raspberry_example
+alr with raspberry_bsp
+```
+
+Include raspberry_bsp.gpr in your own gpr file:
+
+```
+with raspberry_bsp.gpr;
+```
+
 ## Autogenerate C bindings
 
 To autogenerate C bindings in the same way as this library, you can
