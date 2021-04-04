@@ -1,4 +1,4 @@
-with "bcm2835_library";
+with "bcm2835/bcm2835_library";
 
 project Raspberry_BSP is
 
