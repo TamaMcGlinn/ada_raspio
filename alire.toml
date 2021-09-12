@@ -9,3 +9,6 @@ maintainers-logins = ["TamaMcGlinn"]
 licenses = "MIT"
 tags = ["raspberry", "pi"]
 website = "https://github.com/TamaMcGlinn/ada_raspio"
+
+[available."case(os)"]
+windows = false
