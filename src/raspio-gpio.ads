@@ -4,10 +4,10 @@ package Raspio.GPIO is
 
    --  TODO track usages of pins using controlled type, so that trying to
    --  create two overlapping pins gives a runtime error
-   type Pin_Type is limited private;
+   type Pin_Type is private;
 
    type Mode_Type is
-     (Input, Output, Alternative_5, Alternative_4, Alternative_0,
+      (Input, Output, Alternative_5, Alternative_4, Alternative_0,
       Alternative_1, Alternative_2, Alternative_3);
    for Mode_Type use (0, 1, 2, 3, 4, 5, 6, 7);
    for Mode_Type'Size use 8;
@@ -15,7 +15,7 @@ package Raspio.GPIO is
    --  TODO make it impossible to mix usage of e.g. BPLUS and V2 pins by making
    --  the package generic / discriminated on type of board
    type Pin_ID_Type is
-     (GPIO_P1_03, GPIO_P1_05, GPIO_P1_07, GPIO_P1_08, GPIO_P1_10, GPIO_P1_11,
+      (GPIO_P1_03, GPIO_P1_05, GPIO_P1_07, GPIO_P1_08, GPIO_P1_10, GPIO_P1_11,
       GPIO_P1_12, GPIO_P1_13, GPIO_P1_15, GPIO_P1_16, GPIO_P1_18, GPIO_P1_19,
       GPIO_P1_21, GPIO_P1_22, GPIO_P1_23, GPIO_P1_24, GPIO_P1_26,
       V2_GPIO_P1_03, V2_GPIO_P1_05, V2_GPIO_P1_07, V2_GPIO_P1_08,
@@ -38,18 +38,18 @@ package Raspio.GPIO is
    for Internal_Resistor_Type'Size use 8;
 
    function Create
-     (Pin_ID            : Pin_ID_Type; Mode : Mode_Type;
+      (Pin_ID            : Pin_ID_Type; Mode : Mode_Type;
       Internal_Resistor : Internal_Resistor_Type) return Pin_Type;
 
-   type Pin_State is (On, Off);
-   for Pin_State use (0, 1);
-   for Pin_State'Size use 8;
+      type Pin_State is (On, Off);
+      for Pin_State use (0, 1);
+      for Pin_State'Size use 8;
 
-   function Read (Pin : Pin_Type) return Pin_State;
+      function Read (Pin : Pin_Type) return Pin_State;
 
-   procedure Turn_On (Pin : Pin_Type);
-   procedure Turn_Off (Pin : Pin_Type);
-   procedure Set (Pin : Pin_Type; State : Pin_State);
+      procedure Turn_On (Pin : Pin_Type);
+      procedure Turn_Off (Pin : Pin_Type);
+      procedure Set (Pin : Pin_Type; State : Pin_State);
 
 private
 
